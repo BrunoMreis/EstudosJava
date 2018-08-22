@@ -1,0 +1,49 @@
+package br.com.alura.alurator;
+
+import java.lang.reflect.InvocationTargetException;
+
+import br.com.alura.alurator.protocolo.Request;
+import br.com.alura.refexao.Refexao;
+
+public class Alurator {
+
+	private String pacoteBase;
+
+	public Alurator(String pacoteBase) {
+		this.pacoteBase = pacoteBase;
+	}
+
+	public Object executa(String url) {
+		// TODO - processa a requisicao executando o metodo
+		// da classe em questao
+
+		// Produto lista
+
+		// produto -> roduto
+
+		Request request = new Request(url);
+		
+
+		try {
+			new Refexao()
+				.refleteClasse(pacoteBase + request.getNomeControle())
+				.getConstrutorPadrao()
+				.invoca();
+			
+			Class<?> classeControle = 	
+
+			Object instanciaControle = classeControle.getDeclaredConstructor().newInstance();
+
+			System.out.println(instanciaControle);
+
+			return null;
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | IllegalArgumentException
+				 | NoSuchMethodException | SecurityException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}catch (InvocationTargetException e) {
+			e.printStackTrace();
+			throw new RuntimeException("Erro no contrutor!",e.getTargetException());
+		}
+	}
+}

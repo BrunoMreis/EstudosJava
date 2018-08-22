@@ -1,0 +1,12 @@
+package br.com.alura.refexao;
+
+public class ManipuladorDeClasse {
+
+	private Class<?> classe;
+
+	public ManipuladorDeClasse(Class<?> classe) {
+		this.classe = classe;
+		// TODO Auto-generated constructor stub
+	}
+
+}

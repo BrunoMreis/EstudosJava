@@ -1,0 +1,15 @@
+package br.com.alura.refexao;
+
+public class Refexao {
+
+	public ManipuladorDeClasse refleteClasse(String fqn) {
+		try {
+			Class<?> classe = Class.forName(fqn);
+			return new ManipuladorDeClasse(classe);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+	}
+
+}

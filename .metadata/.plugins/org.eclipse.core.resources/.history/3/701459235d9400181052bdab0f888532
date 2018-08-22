@@ -1,0 +1,27 @@
+package br.com.alura.refexao;
+
+import java.lang.reflect.Constructor;
+
+public class ManipuladorDeClasse {
+
+	private Class<?> classe;
+
+	public ManipuladorDeClasse(Class<?> classe) {
+		this.classe = classe;
+		// TODO Auto-generated constructor stub
+	}
+
+	public Object getConstrutorPadrao() {
+		try {
+			Constructor<?> constructorPadrao = classe.getDeclaredConstructor();
+			
+			
+		} catch (NoSuchMethodException | SecurityException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		
+		return null;
+	}
+
+}

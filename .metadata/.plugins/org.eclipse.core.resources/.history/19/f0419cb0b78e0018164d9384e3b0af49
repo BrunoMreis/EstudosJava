@@ -1,0 +1,31 @@
+package br.com.alura.java.io.teste;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class TesteEscritaFileWriter {
+
+	public static void main(String[] args) throws IOException {
+
+		FileWriter fw = new FileWriter("lorem2.txt");
+		BufferedWriter bw = new BufferedWriter(fw);
+		
+		fw.write("Bruno Moreira Reis!");
+		fw.write(System.lineSeparator());
+		fw.write("\r\n");
+		fw.write("Regina Aparecida Moreira! \r\n");
+		fw.write("Teste");
+		
+		bw.write("Bruno Moreira Reis!");
+		bw.write(System.lineSeparator());
+		bw.write("\r\n");
+		bw.write("Regina Aparecida Moreira! \r\n");
+		bw.write("Teste");
+		
+		
+		fw.close();
+
+	}
+
+}

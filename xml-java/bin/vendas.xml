@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<venda moeda="Real"
+	xsi:noNamespaceSchemaLocation="formatoDevenda.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<formaDePagamento>Cartão</formaDePagamento>
+	<produtos>
+		<produto>
+			<nome>Livro</nome>
+			<preco>29.9</preco>
+		</produto>
+		<produto>
+			<nome>comida</nome>
+			<preco>19.9</preco>
+		</produto>
+		<produto>
+			<nome>joia</nome>
+			<preco>2339.9</preco>
+		</produto>
+	</produtos>
+</venda>
